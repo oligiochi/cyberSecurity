@@ -1,6 +1,4 @@
-# in sql/union/test2.py
-from ..util.Inj import Inj
-
+from sql_w.util.Inj import Inj
 import binascii
 import time
 
