@@ -1,4 +1,4 @@
-from Inj import Inj
+from sql.util.Inj import Inj
 import binascii
 
 inj = Inj('http://web-17.challs.olicyber.it')
