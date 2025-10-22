@@ -1,0 +1,2 @@
+pwd
+cat /flag.txt
