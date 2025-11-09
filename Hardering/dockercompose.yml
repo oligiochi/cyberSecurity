@@ -1,0 +1,7 @@
+services:
+  debian13:
+    build: .
+    container_name: debian13-ssh
+    ports:
+      - "2222:22"
+    restart: unless-stopped
