@@ -1,0 +1,47 @@
+Devo trovare tutti gli eseguibili con il bit suid impostato a 1
+Significa che hanno s tra i permessi user --> bit 4000 impostato
+
+
+find → cammina nel filesystem.
+
+"$DIR" → directory di partenza.
+
+-xdev → non attraversa altri filesystem, evita /proc, /sys, /run ecc.
+👉 così eviti errori e rumore.
+
+-type f → solo file regolari (non directory, non symlink).
+
+-perm -4000 → qui c’è il trucco:
+
+4 = bit SUID
+
+000 = il resto dei permessi non importa
+
+il - davanti significa “matcha esattamente quel bit”
+
+-print0 → stampa i risultati separandoli con carattere NUL (serve per file con spazi).
+
+2>/dev/null → ignora errori tipo “permission denied”.
+
+
+Permessi | Binario | Ottale
+---      |   000   |   0
+--x	     |   001   |   1
+-w-	     |   010   |   2
+-wx	     |   011   |   3
+r--	     |   100   |   4
+r-x	     |   101   |   5
+rw-	     |   110   |   6
+rwx	     |   111   |   7
+
+Bit speciale   |   Ottale   |     Significato
+SUID	       |     4	    |  esegui come proprietario
+SGID	       |     2	    |  esegui come gruppo
+sticky	       |     1	    |  elimina solo se sei proprietario
+
+Quindi:
+4xxx → file SUID
+2xxx → file SGID
+1xxx → directory sticky (classico /tmp)
+6xxx → SUID + SGID
+7xxx → tutti e tre

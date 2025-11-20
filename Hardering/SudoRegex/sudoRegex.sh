@@ -1,7 +1,7 @@
 NOME_SCRIPT="studente-limited-command-regex"
 cd /etc/sudoers.d
-cat <<'EOF' > $NOME_SCRIPT
-    Cmnd_Alias NMAP_BLOCK = /usr/bin/nmap -p *, /usr/bin/nmap * -p *, /usr/bin/nmap *-p*, /usr/bin/nmap * -p*
+cat <<'EOF' | sudo tee $NOME_SCRIPT > /dev/null
+    Cmnd_Alias NMAP_BLOCK = /usr/bin/nmap -*
     studente ALL=(ALL) NOPASSWD: /usr/bin/nmap, !NMAP_BLOCK
 EOF
 

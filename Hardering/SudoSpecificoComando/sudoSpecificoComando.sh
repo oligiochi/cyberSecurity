@@ -1,6 +1,6 @@
 NOME_SCRIPT="studente-limited-command"
 cd /etc/sudoers.d
-echo "studente ALL=(ALL) NOPASSWD: /usr/bin/nmap" > $NOME_SCRIPT
+echo "studente ALL=(ALL) NOPASSWD: /usr/bin/nmap" | sudo tee $NOME_SCRIPT > /dev/null
 
 # 3) Imposta i permessi corretti (obbligatorio)
 sudo chmod 440 /etc/sudoers.d/$NOME_SCRIPT
