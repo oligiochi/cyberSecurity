@@ -1,0 +1,16 @@
+exam@debian13-lab:~$ echo "exam" | pwscore
+Password quality check failed:
+ The password contains less than 1 digits
+exam@debian13-lab:~$ echo "exam1" | pwscore
+Password quality check failed:
+ The password contains less than 1 uppercase letters
+exam@debian13-lab:~$ echo "Exam1" | pwscore
+Password quality check failed:
+ The password contains less than 1 non-alphanumeric characters
+exam@debian13-lab:~$ echo "Ex!m1" | pwscore
+-bash: !m1: event not found
+exam@debian13-lab:~$ echo "Ex-m1" | pwscore
+Password quality check failed:
+ The password is shorter than 8 characters
+exam@debian13-lab:~$ echo "Ex-m1aaa" | pwscore
+31

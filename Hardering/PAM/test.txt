@@ -1,0 +1,15 @@
+exam@debian13-lab:~$ grep "minium-requirement-pam.conf" /etc/pam.d/common-password
+exam@debian13-lab:~$ grep pwquality /etc/pam.d/common-password
+password	requisite			pam_pwquality.so retry=3
+password	requisite pam_pwquality.so try_first_pass minlen=8 dcredit=-1 ucredit=-1 ocredit=-1 lcredit=-1
+exam@debian13-lab:~$ passwd
+Changing password for exam.
+Current password: 
+New password: 
+BAD PASSWORD: The password is the same as the old one
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+New password: 
+BAD PASSWORD: The password fails the dictionary check - it does not contain enough DIFFERENT characters
+passwd: Have exhausted maximum number of retries for service
+passwd: password unchanged

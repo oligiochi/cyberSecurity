@@ -26,5 +26,3 @@ def esegui_script_remoto(sh: str):
 
     client.close()
 
-if __name__ == "__main__":
-    esegui_sh_remoto("/home/giovanni/Uni/cyber/esercizi/Hardering/unitfileSystemctl/Systemctlunit.sh")
