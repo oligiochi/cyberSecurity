@@ -8,7 +8,7 @@ def esegui_script_remoto(sh: str):
         hostname="localhost",
         username="exam",         # <<< UTENTE GIUSTO
         password="exam",         # <<< PASSWORD GIUSTA
-        port=2223,
+        port=2222,
         allow_agent=False,
         look_for_keys=False
     )

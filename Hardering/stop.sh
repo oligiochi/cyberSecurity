@@ -1,10 +1,5 @@
 #!/bin/bash
 
-echo "Spegnendo la VM..."
-vagrant halt
-
-echo "Riattivando KVM..."
-sudo modprobe kvm
-sudo modprobe kvm_intel
+sudo virsh shutdown debian13-lab
 
 echo "VM spenta e KVM riattivato!"
