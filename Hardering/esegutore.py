@@ -5,10 +5,10 @@ def esegui_script_remoto(sh: str):
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
     client.connect(
-        hostname="localhost",
+        hostname="192.168.122.185",
         username="exam",         # <<< UTENTE GIUSTO
         password="exam",         # <<< PASSWORD GIUSTA
-        port=2222,
+        port=22,
         allow_agent=False,
         look_for_keys=False
     )
