@@ -14,13 +14,13 @@ Gli esercizi con l'asterisco sono fortemente suggeriti, gli altri opzionali.
 - *MEME SHOP - 5<span style="float: right;">&check;</span> 
 - *Admin's secret - 5<span style="float: right;">&check;</span> 
 - *Light of Dark? - 6<span style="float: right;">&check;</span>
-- Shells' Revenge - 6<span style="float: right;">&cross;</span> 
-- Shell's Revenge 2 - 6<span style="float: right;">&cross;</span> 
+- Shells' Revenge - 6<span style="float: right;">&check;</span> 
+- Shell's Revenge 2 - 6<span style="float: right;">&check;</span>
 - A TOO small reminder... - 7<span style="float: right;">&cross;</span> 
 - Password Changer 3000 - 7<span style="float: right;">&cross;</span> 
 - ZioFrank - 7 <span style="float: right;">&check;</span>
 - If you have no time, just don't wait - 7<span style="float: right;">&cross;</span> 
-- I got magic - 7<span style="float: right;">&cross;</span> 
+- I got magic - 7<span style="float: right;">&check;</span>
 - C style login - 7<span style="float: right;">&check;</span>
 - Curious George - 7<span style="float: right;">&cross;</span> 
 - TIMP - 7<span style="float: right;">&check;</span> 
@@ -31,7 +31,7 @@ Gli esercizi con l'asterisco sono fortemente suggeriti, gli altri opzionali.
 
 - *Gabibbo Says - 1<span style="float: right;">&check;</span> 
 - *FrittoMisto 1 - 4
-- *EasyNotes - 4
+- *EasyNotes - 4<span style="float: right;">&check;</span>
 - *Pincode - 4<span style="float: right;">&check;</span> 
 - *Sound of Silence - 4<span style="float: right;">&check;</span> 
 - FlagDownloader 1 - 6
